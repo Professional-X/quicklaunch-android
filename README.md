@@ -1,534 +1,241 @@
-# QuickLaunch - Universal Search Launcher for Android
+<div align="center">
 
-<!-- SEO Meta Tags -->
-<meta name="description" content="QuickLaunch is a lightning-fast universal search launcher for Android. Search apps, files, contacts, calculator, unit conversions, and more from one powerful interface inspired by KRunner, Spotlight, and PowerToys Run.">
-<meta name="keywords" content="android launcher, universal search, search launcher, krunner android, spotlight android, powertoys run android, android productivity app, quick launcher, app search, file search, calculator android, unit converter, android efficiency app">
-<meta name="author" content="QuickLaunch Team">
-<meta name="robots" content="index, follow">
+# ⚡ Quick Launch
 
-<!-- Open Graph Tags -->
-<meta property="og:title" content="QuickLaunch - Universal Search Launcher for Android">
-<meta property="og:description" content="Lightning-fast universal search launcher for Android. Search apps, files, contacts, calculator, unit conversions from one powerful interface.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://github.com/quicklaunch/quicklaunch-android">
-<meta property="og:image" content="https://raw.githubusercontent.com/quicklaunch/quicklaunch-android/main/images/quicklaunch-logo.png">
+### The command palette your Android phone was missing.
 
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="QuickLaunch - Universal Search Launcher for Android">
-<meta name="twitter:description" content="Lightning-fast universal search launcher for Android. Search apps, files, contacts, calculator, unit conversions from one powerful interface.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/quicklaunch/quicklaunch-android/main/images/quicklaunch-logo.png">
+**Spotlight for macOS. KRunner for KDE. Now, finally, one search bar to rule your whole phone.**
 
-<p align="center">
-  <img src="images/quicklaunch-logo.png" alt="QuickLaunch Logo" width="200"/>
-</p>
+Type anything. Open apps, do math, convert units, search the web, find files, message a contact, flip your flashlight — all from one floating panel that appears over *any* app, on *any* screen, in under a second.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-Android-green?style=flat-square" alt="Platform">
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Min%20SDK-24%20(Android%207.0)-orange?style=flat-square" alt="Min SDK">
-  <img src="https://img.shields.io/badge/Target%20SDK-34%20(Android%2014)-red?style=flat-square" alt="Target SDK">
-  <img src="https://img.shields.io/badge/Language-Kotlin-purple?style=flat-square" alt="Language">
-</p>
+[![Android](https://img.shields.io/badge/Platform-Android%207.0%2B-3DDC84?logo=android&logoColor=white)](#requirements)
+[![API](https://img.shields.io/badge/API-24--35-3DDC84)](#requirements)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.21-7F52FF?logo=kotlin&logoColor=white)](#architecture)
+[![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)](#architecture)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
+[![No Ads](https://img.shields.io/badge/Ads-none-success)](#privacy-first-by-design)
+[![No Trackers](https://img.shields.io/badge/Trackers-none-success)](#privacy-first-by-design)
+[![Internet Permission](https://img.shields.io/badge/INTERNET%20permission-not%20requested-success)](#privacy-first-by-design)
 
-> **Universal Search Launcher inspired by KDE Plasma's KRunner, macOS Spotlight, and Windows PowerToys Run**
+**[Download](#build-instructions) · [Features](#-why-youll-love-it) · [Screenshots](#-see-it-in-action) · [Setup](#-get-up-and-running-in-2-minutes) · [FAQ](#-faq)**
+
+</div>
 
 ---
 
-## 🚀 What is QuickLaunch?
+## 🤔 The problem
 
-QuickLaunch is a **lightning-fast universal search launcher** for Android that lets you access almost anything on your phone from one unified search interface. Instead of opening multiple apps, **everything is just a search away**.
+Your phone has 200 apps on it. Finding the one you want means unlocking, swiping through home screens, or digging through an app drawer. Need to do a quick calculation? Open a calculator app. Convert kilometers to miles? Open a browser, type a query, wait for ads to load. Want to flip on the flashlight? Swipe down, find the tile, tap it.
 
-QuickLaunch combines the best features from desktop search launchers into a powerful Android app:
+Every one of these is a *tiny* task that takes *too many* steps.
 
-- **KRunner (KDE Plasma)** - Global search, calculator, commands
-- **Spotlight (macOS)** - Speed, minimal UI, instant results
-- **PowerToys Run (Windows)** - Plugin architecture, extensibility
-- **Alfred (macOS)** - Workflow shortcuts, smart ranking
+## ✨ The fix
 
-### Key Benefits
-
-| Feature | Benefit |
-|---------|---------|
-| ⚡ **Instant Search** | Find anything in under 50ms |
-| 🧮 **Built-in Calculator** | Basic math, scientific functions, unit conversions |
-| 📁 **File Search** | Search files by name, type, or extension |
-| 📱 **Universal App Launcher** | Launch any app instantly |
-| 📞 **Contact Search** | Call, message, or email contacts |
-| 🔒 **Privacy First** | All data stays on your device |
-| 📱 **No Root Required** | Works on any Android device |
-
----
-
-## 📥 Download
-
-### Latest APK
-
-[![Download APK](https://img.shields.io/badge/Download-APK-blue?style=for-the-badge)](assets/quicklaunch.apk)
-
-- **Version:** Latest
-- **Size:** ~17 MB
-- **Requirements:** Android 7.0 (API 24) or higher
-- **No root required**
-
-### Installation Instructions
-
-1. **Download** the APK from the link above
-2. **Enable** "Install from unknown sources" in Settings → Security
-3. **Open** the downloaded APK file
-4. **Install** and grant requested permissions as needed
-
-> **Note:** All permissions are optional. The app works without them but with limited features.
-
----
-
-## ⚡ Features
-
-### 🧮 Built-in Calculator
-
-Type mathematical expressions directly for instant results:
-
-**Basic Operations:**
-- Addition: `2+2` → `4`
-- Subtraction: `10-5` → `5`
-- Multiplication: `10*5` → `50`
-- Division: `100/4` → `25`
-
-**Scientific Functions:**
-- Trigonometry: `sin 45`, `cos 30`, `tan 60`
-- Roots: `sqrt 144` → `12`, `cbrt 27` → `3`
-- Logarithms: `log 100` → `2`, `ln 2.718`
-- Factorials: `5!` → `120`
-- Powers: `2^10` → `1024`
-
-**Unit Conversions:**
-- **Length:** `100 km`, `1 mile`, `1000 mm`
-- **Weight:** `50 kg`, `100 lbs`, `500 g`
-- **Temperature:** `32°C`, `212°F`, `0°C`
-- **Currency:** `100 USD`, `50 EUR` (live rates)
-- **Digital Storage:** `1 TB`, `500 MB`, `2 GB`
-- **Time:** `2 hours`, `90 minutes`
-- **Volume:** `1 L`, `1 gallon`, `100 ml`
-- **Area:** `1 acre`, `100 sqm`
-- **Speed:** `100 km/h`, `60 mph`
-- **Pressure:** `1 atm`, `101.325 kPa`
-- **Energy:** `1000 J`, `1 kWh`
-- **Data Transfer:** `100 Mbps`, `1 Gbps`
-
-### 📁 File Search
-
-Search files by name, extension, or type:
-
-| Search Query | Result |
-|-------------|--------|
-| `pdf` | All PDF documents |
-| `photo` | All images |
-| `download` | Download folder contents |
-| `.doc` | Word documents |
-| `.mp3` | Music files |
-| `.mp4` | Video files |
-| `.zip` | Compressed archives |
-| `.apk` | Android apps |
-
-**Supported File Types:**
-- Documents: PDF, DOC, DOCX, TXT, RTF, XLS, XLSX, PPT, PPTX
-- Images: JPG, PNG, GIF, BMP, WEBP, SVG
-- Audio: MP3, WAV, FLAC, AAC, OGG, M4A
-- Video: MP4, MKV, AVI, MOV, WEBM
-- Archives: ZIP, RAR, 7Z, TAR, GZ
-- Code: APK, JSON, XML, HTML, CSS, JS
-
-### ⚙️ Quick Commands
-
-Instant access to settings and system actions:
-
-| Command | Action |
-|---------|--------|
-| `wifi` | Open Wi-Fi settings |
-| `bluetooth` | Open Bluetooth settings |
-| `flashlight` | Toggle flashlight |
-| `camera` | Open camera app |
-| `calculator` | Open calculator |
-| `battery` | Battery settings |
-| `display` | Display settings |
-| `sound` | Sound settings |
-| `dnd` | Toggle Do Not Disturb |
-| `location` | GPS/Location settings |
-| `airplane` | Airplane mode toggle |
-| `hotspot` | Mobile hotspot settings |
-| `data` | Data usage settings |
-| `apps` | App management |
-| `storage` | Storage settings |
-| `security` | Security settings |
-| `accounts` | Account settings |
-
-**Web Shortcuts:**
-| Command | Action |
-|---------|--------|
-| `yt [query]` | Search YouTube |
-| `map [place]` | Open Google Maps |
-| `search [query]` | Web search |
-| `g [query]` | Google search |
-| `ddg [query]` | DuckDuckGo search |
-
-### 📱 App Launcher
-
-- Launch any installed app instantly
-- Recently used apps shown first
-- Usage-based smart ranking
-- Search by app name or package name
-- Show app information and storage size
-
-### 📞 Contact Search
-
-- Search contacts by name or number
-- Quick actions for each contact:
-  - 📞 **Call** - Direct phone call
-  - 💬 **SMS** - Send text message
-  - ✉️ **Email** - Send email
-  - 📹 **WhatsApp** - Open WhatsApp chat
-  - 💼 **Telegram** - Open Telegram chat
-
-### 📋 Clipboard History
-
-- Automatically save clipboard items
-- Pin important items for quick access
-- Quick copy action for any item
-- Clear history option
-- Persistent storage across sessions
-
-### ⚡ Settings Search
-
-Search through all Android settings:
-- Wi-Fi, Bluetooth, Display, Sound
-- Apps, Notifications, Battery
-- Storage, Security, Users
-- Network, VPN, Accounts
-- Accessibility, Shortcuts
-
-### 🌐 Internet Search
-
-Search the web using your preferred provider:
-- 🔍 Google (default)
-- 🦆 DuckDuckGo
-- 🌐 Bing
-- 🛡️ Brave Search
-
----
-
-## 🔒 Privacy & Security
-
-### ✅ What We DON'T Do
-
-| ❌ Never | Why This Matters |
-|----------|------------------|
-| No data collection | Your search history stays private |
-| No internet tracking | We don't track your searches |
-| No background monitoring | Only activates when you open the app |
-| No unnecessary permissions | Only requests permissions when needed |
-| No ads or tracking | Completely ad-free experience |
-| No cloud services | All processing happens locally |
-
-### ✅ Optional Permissions
-
-| Permission | Purpose | When Needed |
-|-----------|---------|-------------|
-| `READ_EXTERNAL_STORAGE` | File search | For finding files on your device |
-| `READ_CONTACTS` | Contact search | To search and call contacts |
-| `CALL_PHONE` | Make calls | To initiate calls from the app |
-| `BIND_ACCESSIBILITY_SERVICE` | Global trigger | For edge swipe gesture |
-| `BIND_QUICK_SETTINGS_TILE` | Quick settings | To add tile to quick settings |
-
-**All permissions are optional.** The app works without them but with limited features.
-
-### 🛡️ Security Features
-
-- **Sandboxed Storage**: App data is isolated from other apps
-- **No Root Required**: Works safely on any Android device
-- **Minimal Attack Surface**: No exposed APIs or background services
-- **Graceful Degradation**: Features requiring denied permissions are simply hidden
-- **Open Source**: Code can be audited for security
-
----
-
-## 🏗️ Technical Architecture
-
-### Clean Architecture
+**Quick Launch** puts a single, fast search bar on top of everything you do. Trigger it from almost anywhere — a floating bubble, a widget, a Quick Settings tile, a voice command, or even the same gesture that opens Google Assistant — type a few characters, and get exactly what you meant:
 
 ```
 ┌─────────────────────────────────────┐
-│         UI / Presentation           │
-│  (Activities, ViewModels, Compose)  │
+│  🔍  Search apps, actions, web…  ✕  │
 ├─────────────────────────────────────┤
-│           Domain Layer              │
-│    (Use Cases, Models, Interfaces)   │
-├─────────────────────────────────────┤
-│          Data Layer                 │
-│  (Repositories, Providers, Storage) │
+│  Apps                               │
+│  📷  Camera                         │
+│  🌐  Chrome                         │
+│                                     │
+│  Calculator                         │
+│  =  (5 + 3) * 7                 56  │
+│                                     │
+│  🌐  Search web for "…"             │
 └─────────────────────────────────────┘
 ```
 
-### Modular Search Provider System
-
-Each search category is an independent, modular provider:
-
-```
-SearchEngine (Orchestrator)
-    ├── AppsSearchProvider
-    ├── ContactsSearchProvider
-    ├── CalculatorSearchProvider
-    ├── FilesSearchProvider
-    ├── CommandsSearchProvider
-    ├── SettingsSearchProvider
-    ├── ClipboardSearchProvider
-    └── InternetSearchProvider
-```
-
-**Benefits of Modular Design:**
-- ✅ Each provider runs independently
-- ✅ Failure in one provider doesn't affect others
-- ✅ Easy to add new providers
-- ✅ Easy to enable/disable features
-- ✅ Better testing and maintenance
-
-### Performance Design
-
-| Goal | Implementation |
-|------|----------------|
-| Fast Launch (<150ms) | Hilt dependency injection |
-| Quick Search (<50ms) | Parallel coroutine searches |
-| Low Memory | Lazy loading, no pre-indexing |
-| Battery Friendly | No background services unless triggered |
+Type it. Tap it. Gone. Back to what you were doing — now with the thing you needed.
 
 ---
 
-## 📂 Project Structure
+## 🚀 Why you'll love it
+
+| | |
+|---|---|
+| **⚡ Instant app search** | Fuzzy, typo-tolerant matching across every installed app — ranks by what you actually use, remembers your pins |
+| **🧮 A real calculator, inline** | `(5+3)*7`, `25% of 80`, `10 % 3` — answered as you type, no separate app, no `eval()` hacks |
+| **📐 Offline unit conversion** | `10 km to miles`, `5kg in lb`, `100 c to f` — length, mass, temperature, volume, time, storage, speed — zero network calls |
+| **🌐 Web search, your engine** | Google, Bing, DuckDuckGo, or Brave — opens your actual browser, no in-app tracking |
+| **📁 Find files by name** | Documents, photos, videos, music, archives, APKs — on-device MediaStore search, nothing leaves your phone |
+| **🔦 Flashlight, by typing "torch"** | Because sometimes the fastest UI is just words |
+| **👤 Contacts, one tap to call or text** | Optional and permission-gated — off until you turn it on |
+| **⚙️ Jump straight to system settings** | `settings wifi`, `settings bluetooth` — skip the maze of menus |
+| **📋 Smart clipboard suggestions** | Offers to copy or search whatever's on your clipboard, read only while the palette is open |
+| **🕘 Recents & pins** | An empty search bar is never really empty — your last actions and favorite apps are right there |
+
+### 🎯 Nine ways to summon it — use whichever fits your muscle memory
+
+- **Assistant gesture** — set Quick Launch as your Android digital assistant and the *exact* gestures that open Google Assistant (long-press home, swipe from a bottom corner, long-press power) open Quick Launch instead. One-tap system dialog, no digging through menus.
+- **Floating bubble** — an Assistive-Touch-style dot that follows you, snaps to the edge, survives a reboot.
+- **Home-screen widget** — bolt icon for the palette, mic icon for voice search.
+- **Voice search** — speak instead of type, works on any device, zero setup.
+- **Share sheet** — share text or a link from any app straight into Quick Launch.
+- **Quick Settings tile**, **persistent notification**, **launcher long-press shortcuts**, and an **in-app fallback** if you'd rather not grant the overlay permission at all.
+
+---
+
+## 🔐 Privacy-first, by design — not by policy
+
+This isn't a privacy *policy* promise. It's a build-level guarantee:
+
+- **No `INTERNET` permission in the manifest.** The app is *structurally incapable* of sending your data anywhere. The only "network" action is your device's browser opening a URL you explicitly chose.
+- **No analytics. No ads. No trackers. No SDKs phoning home.**
+- **Clipboard is read only while the palette is open and focused** — never in the background, per Android 10+'s own restrictions.
+- **File search reads names only** — file contents are never opened, scanned, or logged.
+- **Recents and pins live entirely in on-device storage.** Uninstall the app, and it's like it was never there.
+
+If you've ever hesitated before granting a random launcher app "storage" and "contacts" and wondered where that data ends up — with Quick Launch, the honest answer is: nowhere. It can't. It doesn't have the permission to try.
+
+---
+
+## 🆚 How it compares
+
+| | Quick Launch | Default launcher search | Web search apps |
+|---|:---:|:---:|:---:|
+| Works over *any* app, not just the home screen | ✅ | ❌ | ❌ |
+| Inline calculator & unit conversion | ✅ | Sometimes | ❌ |
+| Offline, no network required for core features | ✅ | ❌ | ❌ |
+| No ads, ever | ✅ | Depends | ❌ |
+| No `INTERNET` permission | ✅ | ❌ | ❌ |
+| Assistant-gesture integration | ✅ | ❌ | ❌ |
+| Open source | ✅ | ❌ | ❌ |
+
+---
+
+## 📱 See it in action
+
+> Add your own screenshots or a short GIF here — a floating-palette demo sells this app faster than any paragraph can.
 
 ```
-com.quicklaunch/
-├── data/
-│   ├── local/
-│   │   ├── dao/           # Room database operations
-│   │   └── datastore/     # Preferences storage
-│   ├── repository/        # Repository implementations
-│   └── source/            # Search providers
-├── di/                    # Hilt dependency injection
-├── domain/
-│   ├── model/             # Domain models
-│   └── repository/        # Repository interfaces
-├── presentation/
-│   └── ui/                # Activities, ViewModels, Composables
-├── service/              # Accessibility & quick settings tiles
-└── widget/               # Home screen widget
+docs/
+├── screenshot-palette.png
+├── screenshot-settings.png
+└── demo.gif
 ```
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠 Get up and running in 2 minutes
 
-| Component | Technology | Version |
-|----------|-------------|---------|
-| Language | Kotlin | 1.9.x |
-| UI Framework | Jetpack Compose | 1.5.x |
-| Dependency Injection | Hilt | 2.48 |
-| Database | Room | 2.6.x |
-| Async Operations | Kotlin Coroutines + Flow | 1.7.x |
-| Architecture | MVVM + Clean Architecture | - |
-| Min SDK | API 24 | Android 7.0 |
-| Target SDK | API 34 | Android 14 |
-| Compile SDK | API 34 | Android 14 |
+1. **Install and open Quick Launch.**
+2. Accept the one-tap **"Set as assistant?"** dialog (shown once) — this is the fastest way to get the Google-Assistant-style gesture trigger. Change it anytime in *Settings → Triggers*.
+3. Tap **Open Quick Launch now** and grant **Display over other apps** so the palette can float above whatever you're doing.
+4. Trigger it however you like: the assistant gesture, the floating bubble, the widget, voice search, the notification, the Quick Settings tile, or a launcher shortcut.
+5. *(Optional)* Grant **Photos & files** access to unlock on-device file search.
+
+That's it — no account, no sign-up, no onboarding survey.
 
 ---
 
-## 📱 How to Use
+## 🏗 Build it yourself
 
-### Trigger Methods
+### Requirements
 
-1. **📱 Widget** - Add QuickLaunch widget to your home screen
-2. **⚡ Quick Settings** - Add QuickLaunch tile to your quick settings panel
-3. **👆 Accessibility** - Swipe from screen edge (if enabled)
+- **Android Studio** Koala (2024.1) or newer — or any IDE with JDK 17/21
+- **JDK 17+** (the Gradle wrapper fetches Gradle 8.10.2 automatically)
+- **Android SDK** platform 35 + build-tools 35
+- An Android **7.0+ (API 24)** device or emulator
 
-### Search Flow
+### Build instructions
 
-```
-┌─────────────┐
-│ Open App    │
-└──────┬──────┘
-       ↓
-┌─────────────┐
-│ Type Query  │
-└──────┬──────┘
-       ↓
-┌─────────────┐
-│ See Results │
-└──────┬──────┘
-       ↓
-┌─────────────┐
-│ Tap Action  │
-└─────────────┘
+```bash
+# Clone it
+git clone https://github.com/<your-username>/quick-launch.git
+cd quick-launch
+
+# Build a debug APK
+./gradlew :app:assembleDebug
+# → app/build/outputs/apk/debug/app-debug.apk
+
+# Run the test suite (88 tests: ranking, calculator, conversion,
+# command parsing, search engine, settings/view-model logic)
+./gradlew :app:testDebugUnitTest
+
+# Install straight to a connected device
+adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-### Quick Examples
-
-| Type This | Get This |
-|----------|---------|
-| `2+2` | Calculator: `4` |
-| `sqrt 144` | Calculator: `12` |
-| `100 km to miles` | Conversion: `62.14 mi` |
-| `pdf` | List of PDF files |
-| `wifi` | Wi-Fi settings page |
-| `John` | John's contact with call/message options |
-| `spotify` | Spotify app launcher |
-| `youtube cat videos` | YouTube search |
-| `32°C to F` | Conversion: `89.6°F` |
-| `flashlight` | Toggle flashlight on/off |
+Or in Android Studio: **File → Open…** → select the project folder → let it sync → **Run**.
 
 ---
 
-## 🌟 Why Choose QuickLaunch?
+## 🧩 Architecture
 
-### vs. Default Android Launchers
+Built the way a modular launcher *should* be — every feature is a pluggable, independently testable search provider:
 
-| Feature | Default Launcher | QuickLaunch |
-|---------|-----------------|-------------|
-| Calculator in search | ❌ | ✅ |
-| Unit conversion | ❌ | ✅ |
-| File search | ❌ | ✅ |
-| Quick commands | ❌ | ✅ |
-| Scientific calculator | ❌ | ✅ |
-| App size | Heavy (30+ MB) | Light (~17 MB) |
+```
+com.example.quicklaunch
+├── overlay/     WindowManager-based floating panel, Compose UI in a service window
+├── search/      SearchEngine — parallel providers, per-keystroke cancellation, ranking
+├── providers/   apps · calculator · unit conversion · web · files · contacts ·
+│                settings shortcuts · clipboard · flashlight
+├── triggers/    9 independent entry points (bubble, widget, voice, assistant
+│                gesture, share target, tile, notification, shortcuts)
+├── data/        DataStore-backed settings & recents, corruption-safe by default
+└── ui/          Material 3 (system/light/dark), compact mode, animation toggle
+```
 
-### vs. Other Search Apps
+**Engineering highlights:**
+- Hand-written recursive-descent expression parser — **no `eval()`, ever**
+- Deterministic, unit-tested fuzzy-matching ranker
+- Every coroutine scope guarded with a `CoroutineExceptionHandler`; DataStore reads self-heal from corruption
+- App icon LRU cache, lazy package index invalidated only by install/uninstall broadcasts
+- Every keystroke's search is cancelled before the next begins — stale results can never race ahead of fresh ones
 
-| Feature | Other Apps | QuickLaunch |
-|---------|-----------|-------------|
-| Modular design | ❌ | ✅ |
-| Independent providers | ❌ | ✅ |
-| No crashes from one provider | ❌ | ✅ |
-| Clean architecture | ❌ | ✅ |
-| Modern tech stack | ❌ | ✅ |
-| Material Design 3 | ❌ | ✅ |
+Curious how it all fits together, or want to add your own provider? The codebase is small enough to read in an afternoon and modular enough to extend in an evening.
 
 ---
 
-## 🔄 Updates & Roadmap
+## 🔑 Permissions, in plain English
 
-### Coming Soon
+| Permission | What it's for | If you say no |
+|---|---|---|
+| `SYSTEM_ALERT_WINDOW` | Floats the palette over other apps | Palette still works inside the app itself |
+| `POST_NOTIFICATIONS` | The optional persistent "Open Quick Launch" notification | That one trigger is disabled; everything else works |
+| `RECORD_AUDIO` | Required by Android for any app registering as a digital assistant | Assistant-gesture trigger unavailable; every other trigger still works |
+| `READ_CONTACTS` | Powers the optional contacts search/call/text provider | Contacts provider silently stays off |
+| Media permissions (13+) / storage (≤12) | On-device file search by name | File search finds nothing beyond the app's own files |
+| `RECEIVE_BOOT_COMPLETED` | Restores the floating bubble after a restart | Bubble comes back next time you open the app |
 
-- [ ] 🌐 Cloud clipboard sync
-- [ ] 🔌 Plugin system
-- [ ] 📊 Usage analytics dashboard
-- [ ] 🎨 Theme customization
-- [ ] ⌨️ Keyboard shortcuts
-- [ ] 🔍 Advanced file filters
-- [ ] 📱 Widget customization
-- [ ] 🌎 Multi-language support
+There is **no `INTERNET` permission** to opt out of, because it's never requested in the first place.
 
-### Changelog
+---
 
-See [CHANGELOG.md](CHANGELOG.md) for version history.
+## ❓ FAQ
+
+**Does this replace my launcher?**
+No — Quick Launch layers on top of whatever launcher you already use. It doesn't touch your home screen.
+
+**Will it slow my phone down?**
+The palette is a lightweight overlay window that only exists while you're using it. No background service runs when it's closed (aside from an optional bubble/notification you can turn off).
+
+**Does it need an internet connection?**
+Only if you tap a web-search result, which opens your browser. Every other feature — calculator, conversions, app search, file search, contacts, settings shortcuts — works fully offline.
+
+**Is my data safe?**
+It never leaves your device — there's no permission in the app that would even let it.
+
+**Can I contribute?**
+Yes, please. See [Contributing](#-contributing) below.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these steps:
-
-1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/yourusername/quicklaunch-android.git`
-3. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-4. **Commit** your changes: `git commit -m 'Add amazing feature'`
-5. **Push** to the branch: `git push origin feature/amazing-feature`
-6. **Open** a Pull Request
-
-### Development Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/quicklaunch/quicklaunch-android.git
-
-# Open in Android Studio
-# Build and run on emulator or device
-```
-
----
-
-## 🐛 Reporting Issues
-
-If you find a bug or have suggestions:
-
-1. **Search** existing issues first
-2. **Create** a new issue with detailed information
-3. **Include**:
-   - Device model and manufacturer
-   - Android version
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Screenshots if applicable
-
----
+Pull requests are welcome — new search providers, ranking improvements, translations, bug fixes. Please open an issue first for anything larger than a small fix, so we can talk through the approach together.
 
 ## 📄 License
 
-This project is open source and available under the **MIT License**.
-
-```
-MIT License
-
-Copyright (c) 2024 QuickLaunch Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+MIT — see [`LICENSE`](LICENSE) for the full text. Use it, fork it, ship your own version.
 
 ---
 
-## 🙏 Acknowledgments
+<div align="center">
 
-Inspired by the amazing work of:
+**If Quick Launch saves you a few seconds a day, give it a ⭐ — it helps other people find it too.**
 
-- **KDE Plasma Team** - [KRunner](https://userbase.kde.org/KRunner)
-- **Apple** - [macOS Spotlight](https://support.apple.com/guide/mac-help/mchlp1008/mac)
-- **Microsoft** - [PowerToys Run](https://github.com/microsoft/PowerToys)
-- **Alfred Team** - [Alfred Launcher](https://www.alfredapp.com/)
-
----
-
-## 📞 Contact & Support
-
-- 📋 **Documentation:** [Wiki](https://github.com/quicklaunch/quicklaunch-android/wiki)
-- 🐛 **Bug Reports:** [Issues](https://github.com/quicklaunch/quicklaunch-android/issues)
-- 💬 **Discussions:** [GitHub Discussions](https://github.com/quicklaunch/quicklaunch-android/discussions)
-- 📧 **Email:** support@quicklaunch.app
-
----
-
-<p align="center">
-  <strong>Made with ❤️ for Android users worldwide</strong>
-</p>
-
-<p align="center">
-  <a href="#">Documentation</a> •
-  <a href="#">Releases</a> •
-  <a href="#">Issues</a> •
-  <a href="#">Discussions</a>
-</p>
-
-<p align="center">
-  ⭐ Star us on GitHub if you find QuickLaunch useful!
-</p>
+</div>
